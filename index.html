@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<title>Curse Platform Battle</title>
+<meta name="description" content="Curse Platform Battle - 2D platform fighting game, local and online multiplayer.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%9A%94%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>⚔️ CURSE PLATFORM BATTLE</h1>
+<div id="w"><canvas id="c" width="900" height="450"></canvas>
+<div id="ov" style="display:none"><div><h2 id="ot">Curse Platform Battle</h2><p id="op">قتال محلي للاعبين على نفس الجهاز</p><button id="ob">ابدأ</button> <button id="ob2">القائمة</button> <button id="ob3" style="display:none">إعادة المباراة</button></div></div>
+<div id="menu"><div id="logo"><small>CURSED ARENA</small><h1>CURSE PLATFORM<br>BATTLE</h1></div><button class="mb" id="bPlay">PLAY</button><div class="mrow"><button class="mb s" id="bCreate">CREATE ROOM</button><button class="mb s" id="bJoin">JOIN ROOM</button></div><button class="mb" id="bHow">HOW TO PLAY</button><button class="mb" id="bSet">SETTINGS</button></div>
+<div id="pn"></div><button id="pause" style="display:none">⏸</button><button id="mute">🔊</button></div>
+<div id="ctl"></div>
+<div id="help">اللاعب 1: A/D حركة • W قفز • G ضرب • F مهارة &nbsp;|&nbsp; اللاعب 2: ◀ ▶ حركة • ▲ قفز • / ضرب • Enter مهارة<br>التقط الكرات المتساقطة من السماء (مهارة واحدة فقط) ثم استخدمها بعد اكتمال شريط الطاقة. (BRAWLER وCLAPPER لديهما 3 مهارات ثابتة بكلفة طاقة وكولداون: F/H/R للاعب 1، وEnter/نقطة/فاصلة للاعب 2). توسيع المجال لـ KING: T للاعب 1 أو ; للاعب 2 (يحتاج طاقة كاملة)<br>🛡 الصد: Q للاعب 1 أو P للاعب 2 (أو زر 🛡) قبل وصول الضربة بلحظة؛ مبكراً أو متأخراً تصبح مكشوفاً. ⚡ Black Flash: أثناء الضرب اضغط الضرب مرة ثانية عندما تصبح الحلقة حول يدك حمراء (20 طاقة + كولداون).<br>💠 RCT (التقنية الملعونة المعكوسة): اضغط مع الاستمرار على E للاعب 1 أو L للاعب 2 (أو زر ✚ على الموبايل) لتحويل الطاقة الملعونة إلى علاج؛ يتوقف عند الضرب القوي أو نفاد الطاقة أو استخدام مهارة، وله كولداون.<br>⚔️ ضربة ثقيلة: B للاعب 1 / Shift الأيمن للاعب 2 (أو 💥) • اندفاع: V / Ctrl الأيمن (أو 💨 أو ضغط الاتجاه مرتين) • اندفاع أثناء الضرب = Flash Step • الضرب في الهواء = Air Combo • شريط أخضر رفيع تحت الطاقة = Stamina.<br>🔥 Awakening: Z للاعب 1 / O للاعب 2 عند امتلاء شريطه (10 ثوانٍ قوة إضافية) • المهارات تترقى Lv2/Lv3 كلما أصابت.<br>🏁 PLAY: لاعبان / ضد الكمبيوتر (AI) / تدريب • أفضل من 3 جولات • 4 خرائط • ⏸ أو Esc للإيقاف المؤقت.<br>🎰 عند التقاط الكرة تدور «البكرة» ثم تستقر على مهارة عشوائية.<br>📱 على الهاتف: المس نصف الشاشة الأيسر (لاعب 1) أو الأيمن (لاعب 2) واسحب يميناً/يساراً للحركة وللأعلى للقفز وللأسفل للاندفاع، واستخدم زرّي الضرب والمهارة بالأسفل.</div>
+<script src="config.js"></script>
+<script src="vendor/socket.io.min.js"></script>
+<script src="net-adapter.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

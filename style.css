@@ -1,0 +1,37 @@
+:root{--bg:#f1eff8;--fg:#1a1530;--pn:#fff;--bd:#cdc6e6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0b1c;--fg:#f1eefc;--pn:#1d1833;--bd:#3a3260}}
+:root[data-theme="dark"]{--bg:#0e0b1c;--fg:#f1eefc;--pn:#1d1833;--bd:#3a3260}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,sans-serif;-webkit-user-select:none;user-select:none}
+body{display:flex;flex-direction:column;align-items:center;padding:6px}
+h1{font-size:17px;margin:4px 0;letter-spacing:1px}
+#w{position:relative;width:100%;max-width:900px}
+canvas{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--bd);background:#0b0620}
+#ov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#000b;border-radius:10px;text-align:center;color:#fff}
+#ov h2{margin:0 0 6px;font-size:26px}#ov p{margin:0 0 14px;font-size:14px;opacity:.85}
+#ob{padding:12px 28px;font-size:16px;border:0;border-radius:24px;background:#7c3aed;color:#fff;font-weight:700}
+#ob3{padding:12px 20px;font-size:14px;border:0;border-radius:24px;background:#0ea5e9;color:#fff;font-weight:700}
+#pause{position:absolute;right:48px;bottom:8px;width:34px;height:34px;border-radius:50%;border:1px solid #a78bfa;background:#000a;color:#fff;font-size:14px;z-index:5}
+.solo #ctl .g:nth-child(2){display:none}
+#ctl{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:8px;direction:ltr;width:100%;max-width:900px}
+.g{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;align-items:center;background:var(--pn);border:1px solid var(--bd);border-radius:12px;padding:6px;max-width:100%}
+.g b{font-size:11px;direction:rtl;width:100%;text-align:center}
+.g button{width:44px;height:44px;border-radius:50%;border:1px solid var(--bd);background:var(--bg);color:var(--fg);font-size:18px;touch-action:none}
+.g button.on{background:#7c3aed;color:#fff}
+.g button.lg{width:54px;height:54px;font-size:22px}
+@media (max-width:600px){.g button{width:40px;height:40px;font-size:16px}.g button.lg{width:50px;height:50px;font-size:20px}}
+#help{font-size:12px;opacity:.8;margin-top:6px;text-align:center;max-width:900px;line-height:1.7}
+#menu{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:min(1.8vw,12px);border-radius:10px;background:radial-gradient(ellipse at center,#0006 20%,#000a 100%);color:#fff;text-align:center}
+#logo small{display:block;letter-spacing:.5em;font-size:min(2.2vw,12px);color:#c4b5fd}
+#logo h1{margin:0;font-size:min(5.6vw,50px);line-height:1;font-weight:900;letter-spacing:2px;background:linear-gradient(180deg,#fff,#a78bfa 60%,#7c3aed);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 12px #7c3aedaa)}
+.mb{width:min(48vw,250px);padding:min(1.4vw,9px) 0;font-size:min(3.2vw,17px);font-weight:800;letter-spacing:2px;color:#fff;background:#7c3aed33;border:2px solid #a78bfa;border-radius:8px;transform:skewX(-8deg);cursor:pointer;transition:.15s}
+.mrow{display:flex;gap:min(1.4vw,8px)}.mb.s{width:min(23vw,121px);font-size:min(2.4vw,12px);letter-spacing:1px}
+.big{font-size:2.2em;letter-spacing:.25em}#rin{font-size:20px;text-align:center;letter-spacing:.3em;width:8em;text-transform:uppercase;padding:6px;border-radius:8px;border:2px solid #a78bfa;background:#0008;color:#fff}
+.mb:hover,.mb:active{background:#7c3aed;box-shadow:0 0 18px #7c3aed}
+#pn{position:absolute;inset:0;display:none;align-items:center;justify-content:center;background:#000d;border-radius:10px;color:#fff;z-index:4;overflow:auto}
+.pc{padding:12px;text-align:center;max-width:92%}.pc h3{margin:0 0 6px;letter-spacing:3px}.pc p{font-size:min(2.8vw,14px);line-height:1.7;margin:0 0 8px}
+#sl{display:flex;flex-direction:column;gap:5px;align-items:center;margin-bottom:8px}
+#mute{position:absolute;right:8px;bottom:8px;width:34px;height:34px;border-radius:50%;border:1px solid #a78bfa;background:#000a;color:#fff;font-size:16px;z-index:5}
+.g button.rct{border-color:#7dd3fc;color:#7dd3fc}
+.g button.rct.on{background:#0ea5e9;color:#fff}
+.g button.par{border-color:#fde047;color:#fde047}
+.g button.par.on{background:#ca8a04;color:#fff}

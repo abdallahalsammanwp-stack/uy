@@ -1,0 +1,12 @@
+# Backend (WebSocket/Socket.IO) on Render. Frontend goes to Vercel (see DEPLOY.md).
+services:
+  - type: web
+    name: curse-platform-battle-server
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: ALLOWED_ORIGINS   # your Vercel URL, e.g. https://my-game.vercel.app (comma-separated for several)
+        sync: false
